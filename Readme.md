@@ -1,5 +1,15 @@
 This module lets you connect to web services using SOAP.  It also provides a server that allows you to run your own SOAP services.
 
+This module has only a few very small modifications beside the original version created by Vinay Pulim.
+
+Things which are different from the original one:
+- Client.js _invoke method now only returns a ready to send envelope instead of sending it directly
+- Wsdl.js method XmlToObject now adds namespaces for all child objects in a object.
+
+I made these changes to we can use 2 Node js Soap modules together(Ws.Js & Node-soap)
+This makes it possible to use the Node-soap module with advanced WSSE security, inlcuding BinarySecurityToken and Certificate verification.
+
+
 Features:
 
 * Very simple API
